@@ -46,6 +46,11 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/doctrine/dbal/lib/Doctrine/DBAL">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
@@ -57,6 +62,11 @@
 		</attributes>
 	</buildpathentry>
 	<buildpathentry kind="src" path="vendor/doctrine/doctrine-cache-bundle">
+		<attributes>
+			<attribute name="composer" value="vendor"/>
+		</attributes>
+	</buildpathentry>
+	<buildpathentry kind="src" path="vendor/doctrine/doctrine-fixtures-bundle">
 		<attributes>
 			<attribute name="composer" value="vendor"/>
 		</attributes>
