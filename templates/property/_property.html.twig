@@ -1,0 +1,10 @@
+    <div class="card mb-4">
+   
+        <div class="card-body"><!--.card-body pour le padding -->
+            <h5 class="card-title">
+                <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a>
+            </h5>
+            <p class="card-text">{{ property.surface }}m<sup>2</sup> - {{ property.city }} ({{ property.postalCode }})</p>
+            <div class="text-primary" style="font-weight:bold;font-size:2rem;">{{ property.getFormatedPrice }} €</div>
+        </div>
+    </div>
