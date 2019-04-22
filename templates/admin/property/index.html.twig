@@ -10,11 +10,17 @@
 		{{ message }}
 		</div>
 		{% endfor %}
+		<div class="text-right" class="pagination" >
+    			{# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(properties) }}
+                </div>
+    	</div>
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>Titre</th>
-					<!--<th>Code Postale</th>-->
+					<th>Code Postale</th>
 					<th>Ville</th>
 					<th>Actions</th>
 				</tr>
@@ -23,7 +29,7 @@
 				{% for property in properties %}
 					<tr>
 						<td>{{ property.title }}</td>
-						<!--<td>{{ property.postalCode }}</td>-->
+						<td>{{ property.postalCode }}</td>
 						<td>{{ property.city }}</td>
 						<td>
 							<a href="{{ path('admin.property.edit', {id: property.id}) }}" class="btn btn-secondary" style="display:inline-block;">Editer</a>
@@ -37,6 +43,13 @@
 					{% endfor %}
 			</tbody>
 		</table>
+		
+    		<div class="text-left" class="pagination" >
+    			{# display navigation #}
+                <div class="navigation">
+                    {{ knp_pagination_render(properties) }}
+                </div>
+    		</div>
 		
 		<div class="text-right">
 		<a href="{{ path('admin.property.new') }}" class="btn btn-primary">Créer un nouveau bien</a>
