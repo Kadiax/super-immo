@@ -1,5 +1,9 @@
     <div class="card mb-4">
-   
+   		{% if property.fileName %}
+       		<img src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('thumb') }}" class="card-img-top" style="width:100%;height:auto" alt="">
+       	{% else %}
+        	<img src="{{ "/images/properties/empty-pictures.jpg" | imagine_filter('thumb') }}" class="card-img-top" style="width:100%;height:auto" alt="">
+   		{% endif %}
         <div class="card-body"><!--.card-body pour le padding -->
             <h5 class="card-title">
                 <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a>

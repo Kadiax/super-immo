@@ -11,6 +11,7 @@ use App\Repository\PropertyRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Knp\Component\Pager\PaginatorInterface;
 use App\Entity\Options;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 
 class AdminPropertyController extends  AbstractController
@@ -81,11 +82,8 @@ class AdminPropertyController extends  AbstractController
 	 * @param Request $request
 	 * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
 	 */
-	public function edit(Property $property, Request $request) 
+	public function edit(Property $property, Request $request)
 	{
-	    //Options
-	    //$option = new Option();
-	    //$property->addOption($option);
 	    
 	    //Formulaire edit
 	    $form = $this->createForm(PropertyType::class, $property);
