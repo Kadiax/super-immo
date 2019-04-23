@@ -10,6 +10,7 @@ use App\Form\PropertyType;
 use App\Repository\PropertyRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Knp\Component\Pager\PaginatorInterface;
+use App\Entity\Options;
 
 
 class AdminPropertyController extends  AbstractController
@@ -82,6 +83,11 @@ class AdminPropertyController extends  AbstractController
 	 */
 	public function edit(Property $property, Request $request) 
 	{
+	    //Options
+	    //$option = new Option();
+	    //$property->addOption($option);
+	    
+	    //Formulaire edit
 	    $form = $this->createForm(PropertyType::class, $property);
 	    $form->handleRequest($request);
 	    
