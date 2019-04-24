@@ -7,19 +7,19 @@ Application de gestion des appartements pour une agence immobilière avec un env
 
 
 # Acceuil
-![home](public/images-readme/home.png)
+![home](public/images-readme/home.PNG)
 
 # Un bien
-![un bien](public/images-readme/unbien.png)
+![un bien](public/images-readme/unbien.PNG)
 
 # Administrateur Connexion
-![connexion administrateur](public/images-readme/admin-con.png)
+![connexion administrateur](public/images-readme/admin-con.PNG)
 
 # Administrateur gestion des biens
-![administration des biens](public/images-readme/admin-bien.png)
+![administration des biens](public/images-readme/admin-bien.PNG)
 
 # Administrateur edition d'un bien
-![edition d'un bien](public/images-readme/admin-bien-edit.png)
+![edition d'un bien](public/images-readme/admin-bien-edit.PNG)
 
 # Administrateur gestion des options
-![administration des options](public/images-readme/admin-options.png)
+![administration des options](public/images-readme/admin-options.PNG)
