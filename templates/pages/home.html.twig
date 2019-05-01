@@ -12,17 +12,9 @@
 	<h2>Les derniers biens</h2>
 	<div class="row flex">
 		{% for property in properties %}
-			<div class="col-3 mt-4">
-				<div class="card">
-					<div class="card-body">
-						<h6 class="card-title">
-							<a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}"> {{ property.title }}</a>
-						</h6>
-						<p class="card-text">{{ property.city }} {{ property.postalCode }} </p>
-						<div class="text-primary" style="font-weight: bold; font-size: 1rem"> {{ property.formatedPrice }} €</div>
-					</div>
-				</div>
-			</div>
+			<div class="col-md-4">
+        			{% include 'property/_property.html.twig' %}
+        		</div>
 			{% endfor %}
 	</div>
 	</div>
