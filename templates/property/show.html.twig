@@ -20,11 +20,34 @@
 
       <div class="row">
         <div class="col-md-8">
-          {% if property.filename %}
-            <img src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('medium') }}" alt="card-img-top" style="width: 100%; height:auto;">
-          {% else %}
-            <img src="{{ '/images/properties/empty.jpg' | imagine_filter('medium') }}" alt="card-img-top" style="width: 100%; height:auto;">
-          {% endif %}
+               <div data-slider>
+            	<div id="carrousel" class="carousel slide" data-ride="carousel">
+            		<div class="carousel-inner">
+            		{% if property.pictures is empty %}
+            		<div class="carousel-item active">
+                        <img src="{{ '/images/empty.jpg' | imagine_filter('medium') }}" alt="card-img-top" style="width: 100%; height:auto;">
+                    </div>
+            		{% else %}	
+            		    {% for picture in property.pictures %}
+            		    	{% if loop.index0 == 0 %} <div class="carousel-item active"> {% else %} <div class="carousel-item">
+                       		{% endif %}	
+                				<img src="{{ vich_uploader_asset(picture, 'imageFile') | imagine_filter('medium') }}" alt="card-img-top" style="width: 100%; height:auto;">
+                    		</div>
+                		{% endfor %}
+            		{% endif %}
+            	  </div>
+            	  
+            	  <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
+            		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            		<span class="sr-only">Previous</span>
+            	  </a>
+            	  <a class="carousel-control-next" href="#carrousel" role="button" data-slide="next">
+            		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+            		<span class="sr-only">Next</span>
+            	  </a>
+            	</div>
+            </div>
+             
         </div>
         <div class="col-md-4">
           <h1>{{ property.title }}</h1>
