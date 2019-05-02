@@ -107,10 +107,6 @@ class Property
      */
     private $options;
 
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $updated_at;
     
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="property", orphanRemoval=true, cascade={"persist"})
@@ -341,19 +337,7 @@ class Property
     }
     
  
-
-    public function getUpdatedAt(): ?\DateTimeInterface
-    {
-        return $this->updated_at;
-    }
-
-    public function setUpdatedAt(\DateTimeInterface $updated_at): self
-    {
-        $this->updated_at = $updated_at;
-
-        return $this;
-    }
-    
+   
     /**
      * @return Collection|Picture[]
      */
