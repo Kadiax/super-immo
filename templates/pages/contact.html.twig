@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Super-Immo contact' %}
+
+{% block body %}
+	<div class="jumbotron text-center">
+		<h1>CONTACTEZ-NOUS</h1>
+		<p>Un agent vous répondra sous 24H !</p>
+	</div>	
+  
+  <!--/ Contact Star /-->
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-t8">
+          <div class="row">
+            <div class="col-md-7">
+              <form class="form-a contactForm" action="" method="post" role="form">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <input type="url" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                      <textarea name="message" class="form-control" name="message" cols="45" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-a">Envoyer</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-5 section-md-t3">
+              <div class="icon-box section-b2">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-paper-plane"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Say Hello</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">Email.
+                      <span class="color-a">contact@example.com</span>
+                    </p>
+                    <p class="mb-1">Phone.
+                      <span class="color-a">+54 356 945234</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="icon-box section-b2">
+                <div class="icon-box-icon">
+                  <span class="ion-ios-pin"></span>
+                </div>
+                <div class="icon-box-content table-cell">
+                  <div class="icon-box-title">
+                    <h4 class="icon-title">Notre adresse</h4>
+                  </div>
+                  <div class="icon-box-content">
+                    <p class="mb-1">
+                      160 Rue de la Pompe, <br>75116 Paris
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--/ Map /-->
+    <div class="col-sm-12 mt-4">
+    	<div class="contact-map box">
+        	<div id="map" class="contact-map">
+            	<div style="width: 1200px;position: relative;">
+            	<iframe width="1200" height="440" src="https://maps.google.com/maps?width=1200&amp;height=440&amp;hl=en&amp;q=160%20Rue%20de%20la%20Pompe%2C%2075116%20Paris+(Super-Immo)&amp;ie=UTF8&amp;t=&amp;z=13&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            	<div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="http://www.googlemapsgenerator.com/da/">Googlemapsgenerator.com/da/</a> & <a href="https://opwaarderenlebara.nl/">opwaarderenlebara (nl)</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+             	</div><br />
+             </div>
+          </div>
+    </div>
+    </div>
+  </section>
+  <!--/ Contact End /-->
+
+{% endblock %}

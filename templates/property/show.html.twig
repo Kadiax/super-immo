@@ -21,7 +21,7 @@
       <div class="row">
         <div class="col-md-8">
                <div data-slider>
-            	<div id="carrousel" class="carousel slide" data-ride="carousel">
+            	<div id="carrouselShow" class="carousel slide" data-ride="carousel">
             		<div class="carousel-inner">
             		{% if property.pictures is empty %}
             		<div class="carousel-item active">
@@ -37,11 +37,11 @@
             		{% endif %}
             	  </div>
             	  
-            	  <a class="carousel-control-prev" href="#carrousel" role="button" data-slide="prev">
+            	  <a class="carousel-control-prev" href="#carrouselShow" role="button" data-slide="prev">
             		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
             		<span class="sr-only">Previous</span>
             	  </a>
-            	  <a class="carousel-control-next" href="#carrousel" role="button" data-slide="next">
+            	  <a class="carousel-control-next" href="#carrouselShow" role="button" data-slide="next">
             		<span class="carousel-control-next-icon" aria-hidden="true"></span>
             		<span class="sr-only">Next</span>
             	  </a>

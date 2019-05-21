@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 class Property
 {
     const  HEAT = [
-        0 => 'Electrique',
+        0 => 'Electric',
         1 => 'Gaz'
         
     ];
@@ -123,6 +123,26 @@ class Property
      * })
      */
     private $pictureFiles;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $bathrooms;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $garages;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $forsale;
 
     public function __construct()
     {
@@ -397,6 +417,54 @@ class Property
             $this->addPicture($picture);
         }
         $this->pictureFiles = $pictureFiles;
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    public function setType(string $type): self
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    public function getBathrooms(): ?int
+    {
+        return $this->bathrooms;
+    }
+
+    public function setBathrooms(int $bathrooms): self
+    {
+        $this->bathrooms = $bathrooms;
+
+        return $this;
+    }
+
+    public function getGarages(): ?int
+    {
+        return $this->garages;
+    }
+
+    public function setGarages(int $garages): self
+    {
+        $this->garages = $garages;
+
+        return $this;
+    }
+
+    public function getForsale(): ?bool
+    {
+        return $this->forsale;
+    }
+
+    public function setForsale(bool $forsale): self
+    {
+        $this->forsale = $forsale;
+
         return $this;
     }
     

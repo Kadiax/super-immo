@@ -76,13 +76,26 @@ class PropertyRepository extends ServiceEntityRepository
     public function findLatest(): array
     {
         return $this->findVisibleQuery()
-        ->setMaxResults(15)
+        ->setMaxResults(6)
         ->orderBy('p.id', 'DESC')
         ->getQuery()
         ->getResult()
         ;
     }
     
+    /**
+     *
+     * @return Property[]
+     */
+    public function findPrevious(): array
+    {
+        return $this->findVisibleQuery()
+        ->setMaxResults(3)
+        ->orderBy('p.id', 'ASC')
+        ->getQuery()
+        ->getResult()
+        ;
+    }
     /**
      *
      * @return QueryBuilder
