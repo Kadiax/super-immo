@@ -32,6 +32,7 @@ document.querySelectorAll('[data-delete]').forEach(a => {
 	})
 });
 
+//navigation
 function myNavFunction(id) {
 	$("#date-popover").hide();
 	var nav = $("#" + id).data("navigation");
