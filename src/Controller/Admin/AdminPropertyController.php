@@ -46,7 +46,8 @@ class AdminPropertyController extends  AbstractController
 	        );
 	    
 	    return $this->render('admin/property/index.html.twig', [
-	        'properties' => $properties
+	        'properties' => $properties,
+	        'current_menu' => 'admin'
 	    ]);
 	}
 	
@@ -72,7 +73,8 @@ class AdminPropertyController extends  AbstractController
 	    return $this->render('admin/property/new.html.twig',
 	        [
 	            'property' => $property,
-	            'form' => $form->createView()
+	            'form' => $form->createView(),
+	            'current_menu' => 'admin'
 	        ]);
 	}
 	
@@ -99,7 +101,8 @@ class AdminPropertyController extends  AbstractController
 	    return $this->render('admin/property/edit.html.twig', 
 	       [
 	           'property' => $property,
-	           'form' => $form->createView()
+	           'form' => $form->createView(),
+	           'current_menu' => 'admin'
 	       ]);
 	}
 	
