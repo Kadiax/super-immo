@@ -217,6 +217,7 @@ ul.top-menu > li > .logout {
 	margin-right: 15px;
 	background: #4ECDC4;
 	margin-top: 15px;
+	display: inherit;
 }
 
 
